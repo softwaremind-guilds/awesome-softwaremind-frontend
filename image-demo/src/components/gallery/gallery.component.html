@@ -1,0 +1,13 @@
+<div class="gallery">
+  <div class="image" *ngFor="let image of images">
+    <img
+      [ngSrc]="image.url"
+      [alt]="image.alt"
+      [width]="(image.url | localImg).width"
+      [height]="(image.url | localImg).height"
+      sizes="(max-width: 768px) 100vw, 50vw"
+      [priority]="image.priority"
+      [placeholder]="(image.url | localImg).placeholder"
+    />
+  </div>
+</div>
